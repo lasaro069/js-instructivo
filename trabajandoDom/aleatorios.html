@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros Aleatorios</title>
+</head>
+<body>
+
+    <h1>Números Aleatorios</h1>
+
+    <p>Este objeto genera un número aleatorio entre 0 y 1 utilizando el método random</p>
+
+    <h2>nomenclatura:</h2>
+    <pre>
+        var numeroAleatorio = Math.random();
+
+        console.log(numeroAleatorio)
+    </pre>
+
+    <p>Si queremos un número mayor que 1, multiplicamos el resultado de la variable por el número o rango deseado</p>
+
+    <pre>
+        var numeroAleatorio = (Math.random()*10);
+
+        console.log(numeroAleatorio);
+    </pre>
+
+    <p>Podemos agregar unos métodos a Math</p>
+    <ul>
+        <li><i><b>Math.floor()</b></i>: Redondea el número decimal al número entero inmediatamente menor
+            <pre>
+                var numeroAleatorio = Math.floor(Math.random()*10);
+            </pre>
+        </li>
+        <li><i><b>Math.ceil</b></i>: Redondea al número entero mayor más cercano
+            <pre>
+                var numeroAleatorio = Math.ceil(Math.random()*10);
+            </pre>
+</li>
+        <li><i><b>Math.round</b></i>: redondea al número más cercano</li>
+        <li></li>
+        <li></li>
+    </ul>
+    
+
+
+    <script src="/aleatorios.js"></script>
+</body>
+</html>

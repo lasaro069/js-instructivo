@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome" />
+    <meta name="description" content="instructivo de JavaScript" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instructivo de JavaScript</title>
+  </head>
+
+  <body>
+
+    <h1>Instructivo de JavaScript</h1>
+    
+    <br>
+    <br>
+    <br>
+
+    <h2>Comentarios</h2>
+    <br>
+    <p>Para insertar comentarios de línea en Js tan solo es necesario insertar <i><b>//</b></i> al inicio del comentario</p>
+
+    <p>Para insertar comentarios de bloque utilizamos <i><b>/*</b></i> al inicio del bloque y <i><b>*/</b></i> al final del bloque</p>
+    
+    <h2>Salidas</h2>
+
+    <ul>
+        <li>Ventana Emergente
+            <pre>
+                alert("Hola Mundo");
+            </pre>
+        </li>
+        <li>document.write
+            <pre>
+                document.write("Hola Mundo")
+            </pre>
+        </li>
+        <li>console.log: Salida desde la consola de Js
+            <pre>
+                console.log("Hola Mundo")
+            </pre>
+        </li>
+    </ul>
+
+    <h2 id="textoPrueba">Variables</h2>
+
+    <p>Pueden ser declaradas como <i><b>var</b></i> o <i><b>let</b></i></p>
+
+    <pre>
+        var nombre = "Luis";
+        let nombre2 = "Felipe";
+    </pre>
+
+    <p>Los tipos de variables en Js son:</p>
+
+    <ul>
+        <li>Numéricas:
+            <pre>
+                var numeroEntero = 23;
+                var numeroDecimal = 23.6;
+            </pre>
+        </li>
+        <li>Cadenas de Texto
+            <pre>
+                var texto = 'soy una cadena de texto'
+            </pre>
+        </li>
+        <li> Booleana
+            <pre>
+                var bool1 = true;
+                var bool2 = false;
+            </pre>
+        </li>
+        <li>Elementos Html
+            <pre>
+                var parrafo = document.querySelector(nombre del 'id' del elemento en html);
+            </pre>
+        </li>
+        <li>Arreglos
+            <pre>
+                var familia = ['Luis', 'Leidi', 'Duvan', 'Felipe'];
+            </pre>
+        </li>
+        <li>Objetos
+            <pre>
+                var planta = {
+                    color: 'verde', 
+                    tamano: 'grande', 
+                    cantidad: 3
+                };
+            </pre>
+        </li>
+        <li>Funciones
+            <pre>
+                var miFuncion = function(){};
+            </pre>
+        </li>
+    </ul>
+
+    <h2>Operadores Aritméticos</h2>
+
+    <ul>
+        <li>suma <i><b>+</b></i></li>
+        <li>resta <i><b>-</b></i></li>
+        <li>multiplicación <i><b>*</b></i></li>
+        <li>división <i><b>/</b></i></li>
+        <li>módulo <i><b>%</b></i> es el valor sobrante de la división</li>
+    </ul>
+
+
+    <h2>operadores de Comparación</h2>
+
+    <ul>
+        <li>igual a <i><b>==</b></i></li>
+        <li>igual a <i><b>==</b></i> compara el valor y tipo de variable</li>
+        <li>mayor que <i><b>></b></i></li>
+        <li>mayor e igual <i><b>>=</b></i></li>
+        <li>menor que <i><b><</b></i></li>
+        <li>menor e igual <i><b><=</b></i></li>
+        <li>diferente <i><b>!=</b></i></li>
+        <li>diferente <i><b>!==</b></i> compara valor y tipo de variable</li>
+        <li><i><b></b></i></li>
+    </ul>
+
+
+    <h2>operadores Lógicos</h2>
+
+    <ul>
+        <li>and <i><b>&&</b></i></li>
+        <li>or <i><b>||</b></i> </li>
+        <li>not <i><b>!</b></i></li>
+    </ul>
+
+
+
+    <h2>Métodos con Strings</h2>
+
+
+
+    <pre>
+        const producto = "Monitor de 20' ";
+
+         Para visualizar el contenido de una variable en la consola:
+        console.log(producto);
+
+        para visualizar la longitud de la variable:
+        console.log(producto.length)
+
+        para verificar si una cadena de texto se encuentra dentro de una variable:
+        console.log(producto.indexOf('monitor'))
+        devuelve la posición en la que se encuentra el elemento
+
+        a diferencia del método includes que devuelve un booleano:
+        console.log(producto.includes('monitor'))
+
+
+
+    </pre>
+
+
+
+
+
+    <h2>Manipulación del DOM</h2>
+
+    <h3><a href="../trabajandoDom/aleatorios.html">Números Aleatorios</a></h3>  
+
+    <h3><a href="../trabajandoDom/arrays.html">Arreglos (Arrays)</a></h3>
+
+    <h3><a href="../trabajandoDom/ciclos.html">Ciclos</a></h3>    
+
+    <h3><a href="../trabajandoDom/dom.html">Manipulando el DOM</a></h3>
+
+    <h3><a href="../trabajandoDom/funciones.html">Funciones y Arreglos</a></h3>
+
+    <h3><a href="../trabajandoDom/intervalos.html">Intervalos</a></h3>
+
+    <h3><a href="../trabajandoDom/practica.html">Prácticas</a></h3>
+    
+    <h3><a href="../trabajandoDom/retardos.html">Retardos</a></h3>
+    
+
+    <h2>Eventos</h2>
+
+    <h3><a href="../eventos/change.html">Change</a></h3>
+    
+    <h3><a href="../eventos/clicydouble.html">Clickydouble</a></h3>
+    
+    <h3><a href="../eventos/eventListener.html">eventListener</a></h3>
+    
+    <h3><a href="../eventos/eventosmouse.html">Eventos de Mouse</a></h3>
+    
+    <h3><a href="../eventos/focus-blur.html">Focus-Blur</a></h3>
+    
+    <h3><a href="../eventos/load.html">Load</a></h3>
+    
+    
+    
+
+
+
+
+    <script src="/scripts.js"></script>
+  </body>
+</html>

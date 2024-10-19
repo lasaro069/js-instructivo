@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Manipulación del DOM</title>
+</head>
+<body>
+
+    <div>
+        <h1>Trabajando con el DOM</h1>
+
+        <p class="texto" > 1- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab earum in sint facere rerum reiciendis veniam itaque natus doloremque at hic vel, officiis soluta provident optio ipsa saepe suscipit cumque.</p>
+        <p class="texto" id="segundo">2- Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora? Accusantium exercitationem at reprehenderit! Fugit illum sint consequatur distinctio magnam? Quibusdam, sed atque. Doloribus praesentium nulla voluptas non voluptatem fugiat?
+        Aspernatur, a, perspiciatis vitae placeat libero tempora soluta dolor hic ex tempore ipsa officia fuga provident. Consectetur quaerat cum vitae excepturi! Magnam autem vel recusandae corporis earum tempora, molestias rerum!
+        Voluptas dolorem laboriosam facilis fugit voluptatem, quia animi ducimus illo nostrum porro sequi eaque quasi et optio harum nobis dignissimos nesciunt magnam quae veniam impedit aliquid. Velit blanditiis iure maxime.</p>
+        <p class="texto">3- Voluptas dolorem laboriosam facilis fugit voluptatem, quia animi ducimus illo nostrum porro sequi eaque quasi et optio harum nobis dignissimos nesciunt magnam quae veniam impedit aliquid. Velit blanditiis iure maxime.</p>
+
+        <span class="boton" id="boton">Botón</span>
+    </div>
+
+    <br><br>
+
+    <h2>Selectores</h2>
+    
+    <br>
+    <br>
+    <br>
+
+    <p>Sirven para seleccionar elementos del html y almacenarlos en variables</p>
+    <p>Estos selectores son <i>'métodos'</i> por tal motivo deben ser aplicados a elementos</p>
+
+    <p>Exsiten dos clases: individuales y múltiples</p>
+    
+    <br>
+    <br>
+    <br>
+
+    <h3>Selectores Individuales</h3>
+    
+    <br>    
+
+    <ul>
+        <li><i><b>getElementById()</b></i>: permite seleccionar un elemento por su <i><b>'id'</b></i>
+            <p>Creamos la variable boton y en el () colocamos el 'id' al que queremos acceder</p>
+            <pre>
+                var boton = document.getElementById('boton');
+            </pre>
+        </li>
+        <li><i><b>querySelector()</b></i>: Selecciona el elemento con un selector CSS, devuelve el primer elemento que coincida
+        <pre>
+            var segundoParrafo = document.querySelector('#segundo');
+        </pre>
+        <p>Este selector se utiliza con '#' como se hace en css</p>
+        </li>
+    </ul>
+    
+    <br>
+    <br>
+    <br>
+
+
+    <h3>Selectores Múltiples</h3>
+    <br>
+
+    <ul>
+        <li><i>getElementsByClassName<b></b></i>: Selecciona todos los elementos que tengan la clase especificada <i><b></b></i>
+            <pre>
+                var parrafos = document.getElementsByClassName('texto');
+            </pre>
+        </li>
+        <li><i><b>getElementByTagName()</b></i>: Selecciona todos los elementos con la etiqueta seleccionada
+        <pre>
+            var etiquetas = document.getElementsByTagName('p');
+        </pre>
+        <p>Este selector se utiliza con las etiquetas del html</p>
+        </li>
+        <li><i><b>querySelectorAll()</b>: contrario al otro 'queryselector', este selecciona todos los elementos que coincidan</i>
+            <pre>
+                var todosParrafos = document.querySelectorAll('.texto')
+            </pre>
+
+        </li>
+    </ul>
+    
+    <br>
+    <br>
+    <br>
+
+    <h2>Crear Elementos en el Html</h2>
+    <br>
+
+    <ul>
+        <li>
+            Para crear elementos o 'nodos' utilizamos el método <i><b>document.createElement('elemento que se quiere crear')</b></i>
+            <pre>
+                var parrafoNuevo = document.createElement('p'); /* Creamos un nuevo párrafo */
+            </pre>
+        
+        </li>
+        <li>para crear elementos de texto utilizamos el método 'document.createTextNode('texto creado');'
+            <pre>
+                var textoNuevo = document.createTextNode('Soy un nuevo texto');  /* Creamos un nuevo texto */
+            </pre>
+        
+        </li>
+        <li>para agregar el nuevo texto al nuevo párrafo utilizamos el método '.appendChild()'
+            <pre>
+                parrafoNuevo.appendChild(textoNuevo);  /* insertamos el texto nuevo en el párrafo nuevo */
+            </pre>
+        
+        </li>
+        <li>Para agregar un nuevo atributo al elemento creado utilizamos el método '.setAttribute'. Recibe dos parámetros: el atributo y el valor
+            <pre>
+                parrafoNuevo.setAttribute('class', 'texto');    /* agregamos el atributo 'class' con el valor 'texto' */
+            </pre>
+
+        </li>
+        <li>para seleccionar el sitio donde va a ser agregado el nuevo elemento utilizamos 'document.getElementsByClassName('nombre del elemento contenedor')[posición del elemento contenedor];'
+            <pre>
+                var contendedor = document.getElementsByClassName('contenedor')[0]
+            </pre>
+
+        </li>
+        <li> Para agregar el elemento dentro del contenedor seleccionado utilizamos el método '.appendChild()'
+            <pre>
+                contendedor.appendChild(parrafoNuevo)
+            </pre>
+
+        </li>
+    </ul>
+    
+    <br>
+    <br>
+    <br>
+
+    <h2>Ubicar elementos en el html creados en JS </h2>
+    <br>
+
+    <p>Si el contenedor padre no tieme un identificador preocedemos de las siguiente forma ya que no podríamos aplicar el <i>'.appendChild()'</i>:</p>
+    <ul>
+        <li></li>
+        <li>
+            Creamos una variable y seleccionamos un identificaodr del elemento hijo del contenedor padre y su posición
+            <pre>
+                var primerParrafo = document.getElementByClassName('texto')[0]
+            </pre>
+        </li>
+        <li>
+            Accedemos al elemento padre de ese párrafo
+            <pre>
+                var parrafoPadre = primerParrafo.parentNode;
+            </pre>
+        </li>
+        <li>Si no tiene un atributo, podemos asignarselo
+            <pre>
+                parrafoPadre.className = 'contenedor'   // asignamos el atributo 'clase' con el valor 'contenedor'
+            </pre>
+
+        </li>
+        <li>Para ubicarlo en una posición específica dentro de este contenedor padre, por ejemplo, en la primera posición:
+            <p>seleccionamos el elemento padre y le colocamos el método <i><b>.insertBefore</b></i> para insertar el nuevo elemento al contenedor padre</p>
+            <p>Este método recibe dos parámetros: </p>
+            <p>la variable creada con el nuevo elemento</p>
+            <p>la variable creada con el elemento siguiente donde quiero ubicar el nuevo elemento</p>
+            <pre>
+                parrafoPadre.insertBefore(parrafoNuevo, primerParrafo);
+            </pre>
+
+        </li>
+        <li></li>
+    </ul>
+
+    <h2>Agregar o modificar clases o ids a elementos del html</h2>
+    <br>
+
+    <p>creamos una variable con el elemento que vamos a modificar</p>
+    <pre>
+        var nombreVariable = document.getElementById('nombreSelector')
+    </pre>
+
+    <p>Para modificar la clase accedemos a la variable con la propiedad '.className</p>
+    <pre>
+        nombreVaraible.className = 'nuevoSelector;'
+    </pre>
+
+    <p>Para agregar un 'id' a un elemento</p>
+    <pre>
+        var primerParrafo = document.getElementsByClassName('texto')[0];
+
+        primerParrafo.id = 'primero';        
+    </pre>
+
+
+
+
+
+
+    
+
+
+
+    <script src="/dom.js"></script>
+    <!-- <script src="/crearElemento.js"></script>
+    <script src="/ubicarElementos.js"></script>
+    <script src="/modificarClases.js"></script>-->
+    <script src="/reemplazarEliminar.js"></script>
+</body>
+</html>

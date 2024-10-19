@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intervalos</title>
+</head>
+<body>
+
+    <h1>Intervalos</h1>
+
+    <p>Es una función reservada, recibe dos parámetros:</p>
+    <p>La función que quiero ejecutar</p>
+    <p>El intérvalo de tiempo en que se ejecutará en milisegundos</p>
+
+    <h2>Estructura</h2>
+
+    <pre>
+        setInterval(function, tiempo);
+    </pre>
+
+    <pre>
+        var segundos = 0;
+
+        function contar(){
+            ++segundos;
+            consola.log(segundos);
+        }
+
+        setInterval(contar, 1000);
+    </pre>
+
+    <p>Otra manera de declararla es creando la función dentro de la función</p>
+    <pre>
+        var segundero = 0;
+        setInterval(function(){
+            ++segundero;
+            console.log(segundero)
+        }, 500);
+    </pre>
+
+
+    
+
+    <script src="/intervalos.js"></script>
+</body>
+</html>

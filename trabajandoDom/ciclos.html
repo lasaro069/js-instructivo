@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo For</title>
+</head>
+<body>
+
+    <h1>Ciclos</h1>
+
+    <h2>Ciclo 'for'</h2>
+    <p>Permite repetir un código mientras una condición sea <i><b>true</b></i>.</p>
+
+    <pre>
+        for(variable inicio; condición; incremento){
+            código que se repite;
+        }
+    </pre>
+
+    <pre>
+        imprimir los números del 1 al 10
+
+        for(var i = 1; i <= 10; i++){
+            console.log(i);
+        }
+
+
+    </pre>
+
+    <h3>Ciclo <i>'for'</i> para recorrer arreglos</h3>
+    <pre>
+        var semana = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado', 'domingo'];
+    </pre>
+
+    <p>Para iterar en el arreglo <i><b>'semana'</b></i>:</p>
+
+    <pre>
+        for (i = 0; i < semana.length; i++){
+            console.log(semana[i]);
+        }
+    </pre>
+
+    <p><i><b>i</b></i> se va iterando en cada posición del arreglo y lo imprime con <i><b>semana[i]</b></i></p>
+
+    <p>Para interrumpir el ciclo en un punto específico con la sentencia <i><b>break</b></i>:</p>
+    <pre>
+        
+        for (i = 0; i < semana.length; i++){
+            if(semana[i] == 'miercoles'){
+                break;
+            }
+            document.write(semana[i]);
+        }
+
+    </pre>
+
+
+    <p>Para saltar el ciclo en un punto específico y continuar con el ciclo con la sentencia <i><b>continue</b></i>:</p>
+    <pre>
+        
+        for (i = 0; i < semana.length; i++){
+            if(semana[i] == 'miercoles'){
+                continue;
+            }
+            document.write(semana[i]);
+        }
+
+    </pre>
+
+    <h3>Ciclo <i>'for in'</i></h3>
+
+    <p>Este es un ciclo especial para recorrer arreglos, lleva como parámetros:</p>
+    <pre>
+        for(variable in arreglo){
+            codigo que se repite
+        }
+    </pre>
+
+    
+    <h2>Ciclo <i>'while'</i></h2>
+
+    <p>cumple la misma función del ciclo for</p>
+
+    <pre>
+        while(condicion){
+            código que se repite;
+            incremento;
+        }
+    </pre>
+
+    <pre>
+        var i = 1;
+
+        while(i < 11){
+            console.log(i);
+            i++;
+        }
+    </pre>
+    <p>inprime los números del 1 al 10</p>
+
+    <h3>Ciclo <i>'do while</i></h3>
+    <p>primero ejecuta una instrucción luego si pasa a verificar la condición</p>
+
+    <pre>
+        var i = 1;
+
+        do{
+            console.log(i);
+            i++;
+        }while(i>11);
+    </pre>
+
+
+
+
+    <script src="/ciclos.js"></script>
+</body>
+</html>

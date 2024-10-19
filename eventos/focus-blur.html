@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/eventos/estilos.css">
+    <title>Evento Focus y Evento Blur</title>
+</head>
+<body>
+
+    <h1>Evento Focus y Evento Blur</h1>
+
+    <p> <i><b></b></i> sucede cuando pinchamos sobre un elemento que hay que completar o llenar, creamos 'foco' en ese elemento  <i><b></b></i></p>
+    <p>El evento <i><b>blur</b></i> sucede cuando hacemos click en un espacio <i>en blanco</i> de la pantalla, se pierde el foco </p>
+
+
+
+    <div class="contenedor">
+        <h1>Mi formulario</h1>
+        <form name="formulario" action="">
+
+            <div class="input-group">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+            </div>
+
+            <div class="input-group">
+                <input type="email" name="email" id="email" placeholder="Correo">
+            </div>
+
+            <div class="input-group">
+                <label for="colorFavorito">Marca esta opción si tienes un color favorito</label>
+                <input type="checkbox" name="colorFavorito" id="colorfavorito">
+            </div>
+
+            <p class="disabled">Selecciona tu color favorito</p>
+
+            <div class="input-group radio-buttons disabled">
+                <input type="radio" name="color" id="verde" disabled> <label for="verde">Verde</label>
+                <input type="radio" name="color" id="azul" disabled> <label for="azul">Azul</label>
+                <input type="radio" name="color" id="otro" disabled> <label for="otro">Otro</label>
+
+            </div>
+
+            <input type="submit" value="Enviar">
+
+
+        </form>
+
+
+    </div>
+
+
+    <script src="/eventos/focus-blur.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/eventos/estilos.css">
+    <title>Evento Load de js</title>
+</head>
+<body>
+
+    <h1>Evento Load</h1>
+
+    <p> <i><b></b></i> Permite ejecutar un código cuando se haya cargado completamente el elemento o el evento <i><b></b></i></p>
+
+
+
+    <div class="contenedor">
+        <h1>Mi formulario</h1>
+        <form name="formulario" action="">
+
+            <div class="input-group">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+            </div>
+
+            <div class="input-group">
+                <input type="email" name="email" id="email" placeholder="Correo">
+            </div>
+
+            <div class="input-group">
+                <label for="colorFavorito">Marca esta opción si tienes un color favorito</label>
+                <input type="checkbox" name="colorFavorito" id="colorFavorito">
+            </div>
+
+            <p class="disabled">Selecciona tu color favorito</p>
+
+            <div class="input-group radio-buttons disabled">
+                <input type="radio" name="color" id="verde" disabled> <label for="verde">Verde</label>
+                <input type="radio" name="color" id="azul" disabled> <label for="azul">Azul</label>
+                <input type="radio" name="color" id="otro" disabled> <label for="otro">Otro</label>
+
+            </div>
+
+            <input type="submit" value="Enviar">
+
+
+        </form>
+
+
+    </div>
+
+
+    <script src="/eventos/load.js"></script>
+    
+</body>
+</html>

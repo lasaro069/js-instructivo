@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/eventos/estilos.css">
+    <title>Mouse over y out</title>
+</head>
+<body>
+
+    <h1>evento mouse Over y Mouse Out</h1>
+
+    <p> <i><b>'mouseOver'</b></i> sucede cuando se coloca el cursor sobre un elemento  <i><b>dblclick</b></i></p>
+
+
+    <p>Para agregar un escuchador hacemos los siguientes pasos:</p>
+
+    <ul>
+        <li>
+            Creamos la variable para acceder al elemento del DOM, indicándo el 'id' del elemento
+            <pre>
+                var boton = document.getElementBYId('boton');
+            </pre>
+        </li>
+        <li>
+            creamos una función para utilizar el evento
+            <pre>
+                function alerta(){
+                    alert("Hola Mundo");
+                }
+            </pre>
+        </li>
+        <li>
+            agregamos el escuchador al elemento seleccionado, en este caso el botón, el cual recibe dos parámetros: 
+            <ul>
+                <li>Qué tipo de evento va a escuchar (la acción que se va a capturar por parte del usuario)</li>
+                <li>Cuál va a ser la función que va a ejecutar</li>
+            </ul>
+            <pre>
+                boton.addEventListener('click', alerta);
+            </pre>
+        </li>
+    </ul>
+
+
+    <div class="contenedor">
+        <h1>Mi formulario</h1>
+        <form name="formulario" action="">
+
+            <div class="input-group">
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+            </div>
+
+            <div class="input-group">
+                <input type="email" name="email" id="email" placeholder="Correo">
+            </div>
+
+            <div class="input-group">
+                <label for="colorFavorito">Marca esta opción si tienes un color favorito</label>
+                <input type="checkbox" name="colorFavorito" id="colorfavorito">
+            </div>
+
+            <p class="disabled">Selecciona tu color favorito</p>
+
+            <div class="input-group radio-buttons disabled">
+                <input type="radio" name="color" id="verde" disabled> <label for="verde">Verde</label>
+                <input type="radio" name="color" id="azul" disabled> <label for="azul">Azul</label>
+                <input type="radio" name="color" id="otro" disabled> <label for="otro">Otro</label>
+
+            </div>
+
+            <input type="submit" value="Enviar">
+
+
+        </form>
+
+        <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae, quidem accusantium. Repellendus asperiores praesentium perspiciatis eos est quam, vel quisquam, voluptas, accusamus natus doloribus cupiditate iste aut tenetur tempore quia.</p>
+
+
+    </div>
+
+
+    <script src="/eventos/eventosmouse.js"></script>
+    
+</body>
+</html>

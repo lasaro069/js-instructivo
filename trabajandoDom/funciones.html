@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones, Arreglos y objetos</title>
+</head>
+<body>
+
+    <h1>Funciones, Arreglos, Objetos</h1>
+
+    <h2>Funciones</h2>
+
+    <p>Son piezas de código que pueden ser reutilizadas una y otra vez</p>
+    <p>Las funciones pueden ser <i>con parámetros</i> y <i>sin parámetros</i></p>
+
+    <h3>Funciones sin Parámetros</h3>
+    <p>Lo primero que hay que hacer es <i><b>Declarar la función</b></i></p>
+    <pre>
+        function saludar(){
+            alert('Hola Mundo');
+        };
+    </pre>
+    <p>Dentro de las llaves se colocan las tareas que la función va a desempeñar</p>
+    <p>Para ejecutarla escribimos:</p>
+    <pre>
+        saludar();
+    </pre>
+
+
+
+    <h3>Funciones con parámetros</h3>
+
+    <p>La función con parámetros lleva, dentro del paréntesis los parámetros deseados</p>
+
+    <pre>
+        function suma(num1, num2){
+            var resultado = num1 + num2;
+            console.log(resultado);
+        }
+    </pre>
+
+
+    <p>Para ejecutarla escribimos:</p>
+    <pre>
+        suma(23, 5);
+    </pre>
+
+    <h3>Funciones con Retorno</h3>
+
+    <p><i><b>return</b></i> llama a la variable del cuerpo de la función y le da un valor</p>
+
+    <pre>
+        function sumar(num1, num2){
+            var resultado = num1 + num2;
+            return resultado;
+        }
+    </pre>
+
+
+    <h2>Objetos</h2>
+
+    <p>Un Objeto es una función que tiene propiedades y métodos</p>
+    <p>Para declarar un objeto:</p>
+    <pre>
+        var planta = {
+            color: 'verde';
+            tamano: 'mediano';
+            cantidad: 2;
+        }
+    </pre>
+
+
+    <p>Para acceder a las propiedades utilizamos</p>
+    <pre>
+        object.propiedad;
+    </pre>
+
+    <p>Para acceder a los métodos:</p>
+    <pre>
+        object.metodo();
+    </pre>
+
+    <h4>Ejemplo:</h4>
+
+    <pre>
+        var texto = 'Los ensayos cortos son escritos en los que se analiza y comenta un concepto, una idea o un asunto significativo de manera relativamente breve. En estos textos, el autor suele hacer explícita su perspectiva a través del planteo de una hipótesis argumentada. Por ejemplo: una tesis, una monografía.';
+    </pre>
+
+    <h4>Propiedades y métodos</h4>
+
+    <p>Las propiedades se definen como:</p>
+    <p><i> var nombreVariable = elememto.propiedad;</i></p>
+
+    <p>Los métodos se definen como:</p>
+    <p><i>var nombreVariable = elemento.metodo();</i></p>
+
+    <ul>
+        <li><i>length</i>: Muestra el número de caracteres de una variable
+            <pre>
+                var numeroCaracteres = texto.length;
+            </pre>
+        </li>
+        <li><i>toUpperCase()</i>: Transforma tods los caracteres a mayúsculas
+        <pre>
+            var minus = texto.toUpperCase();
+        </pre></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+
+
+
+    <script src="/funciones.js"></script>
+    
+</body>
+</html>
